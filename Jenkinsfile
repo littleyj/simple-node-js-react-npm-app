@@ -1,13 +1,17 @@
 pipeline {
     agent {
         docker {
-            image 'node:14.16-alpine' 
+            image 'node:14.16-alpine'
             args '-p 3000:3000' 
         }
     }
     stages {
         stage('Build') { 
             steps {
+                echo 'this works'
+                echo $(which docker)
+                sh 'echo "Hello World!"'
+                sh '''python --version'''
                 sh 'npm install' 
             }
         }
