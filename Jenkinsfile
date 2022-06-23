@@ -8,10 +8,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo 'this works'
-                sh 'echo "Hello World!"'
-                sh '''python --version'''
-                sh 'npm install' 
+                script {
+                    echo 'this works'
+                    sh 'echo "Hello World!"'
+                    sh '''python --version'''
+                    sh 'npm install' 
+                }
             }
         }
     }
