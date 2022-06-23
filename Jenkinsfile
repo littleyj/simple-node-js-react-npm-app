@@ -9,7 +9,6 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'this works'
-                echo $(which docker)
                 sh 'echo "Hello World!"'
                 sh '''python --version'''
                 sh 'npm install' 
