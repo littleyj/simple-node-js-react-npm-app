@@ -9,9 +9,6 @@ pipeline {
         stage('Build') { 
             steps {
                 script {
-                    echo 'this works'
-                    sh 'echo "Hello World!"'
-                    sh '''python --version'''
                     sh 'npm install' 
                 }
             }
